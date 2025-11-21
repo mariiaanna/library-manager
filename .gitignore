@@ -1,0 +1,15 @@
+# Visual Studio files and folders
+*.vs/
+*.suo
+*.user
+
+# Binaries and intermediate files
+[Bb]in/
+[Oo]bj/
+
+# NuGet packages
+*.nupkg
+
+# IDE files
+*.cache
+*.log
