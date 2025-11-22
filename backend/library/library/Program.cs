@@ -38,12 +38,28 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddControllers();
 var connectionString = builder.Configuration.GetConnectionString("LibraryDbConnection");
 builder.Services.AddDbContext<LibraryDbContext>(options => options.UseNpgsql(connectionString));
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins"; 
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      builder =>
+                      {
+                          builder.WithOrigins("http://127.0.0.1:5500",
+                                              "http://localhost:5500") 
+                                 .AllowAnyHeader()
+                                 .AllowAnyMethod(); 
+                      });
+});
+
 var app = builder.Build();
 
 
 
 
 app.UseHttpsRedirection();
+app.UseCors(MyAllowSpecificOrigins);
 app.UseAuthentication();
 app.UseAuthorization();
 
