@@ -3,32 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\Marichka\\library-manager\\backend\\library\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Migrations\\20251121211212_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:library\\Migrations\\20251121211212_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\library.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\library.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\services\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\services\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\services\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\services\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\migrations\\20251122160330_addusertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\migrations\\20251122160330_addusertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\data\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\data\\librarydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\controllers\\bookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\migrations\\20251121211212_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\migrations\\20251121211212_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 16,
           "Children": [
             {
               "$type": "Bookmark",
@@ -57,86 +97,220 @@
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "library.http",
+              "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\library.http",
+              "RelativeDocumentMoniker": "library\\library.http",
+              "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\library.http",
+              "RelativeToolTip": "library\\library.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-11-22T17:52:32.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "library\\Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Services\\JwtService.cs",
+              "RelativeToolTip": "library\\Services\\JwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T17:16:20.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IJwtService.cs",
+              "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Services\\IJwtService.cs",
+              "RelativeDocumentMoniker": "library\\Services\\IJwtService.cs",
+              "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Services\\IJwtService.cs",
+              "RelativeToolTip": "library\\Services\\IJwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T17:14:59.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserLoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\DTOs\\UserLoginDto.cs",
+              "RelativeDocumentMoniker": "library\\DTOs\\UserLoginDto.cs",
+              "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\DTOs\\UserLoginDto.cs",
+              "RelativeToolTip": "library\\DTOs\\UserLoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T17:13:30.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserRegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\DTOs\\UserRegisterDto.cs",
+              "RelativeDocumentMoniker": "library\\DTOs\\UserRegisterDto.cs",
+              "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\DTOs\\UserRegisterDto.cs",
+              "RelativeToolTip": "library\\DTOs\\UserRegisterDto.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T17:11:36.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Services\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "library\\Services\\PasswordHasher.cs",
+              "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Services\\PasswordHasher.cs",
+              "RelativeToolTip": "library\\Services\\PasswordHasher.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T17:00:40.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "library\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "library\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T16:52:09.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20251122160330_AddUserTable.cs",
+              "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Migrations\\20251122160330_AddUserTable.cs",
+              "RelativeDocumentMoniker": "library\\Migrations\\20251122160330_AddUserTable.cs",
+              "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Migrations\\20251122160330_AddUserTable.cs",
+              "RelativeToolTip": "library\\Migrations\\20251122160330_AddUserTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T16:03:31.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "BooksController.cs",
+              "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Controllers\\BooksController.cs",
+              "RelativeDocumentMoniker": "library\\Controllers\\BooksController.cs",
+              "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Controllers\\BooksController.cs",
+              "RelativeToolTip": "library\\Controllers\\BooksController.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAkwF0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T13:45:33.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthorsController.cs",
+              "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Controllers\\AuthorsController.cs",
+              "RelativeDocumentMoniker": "library\\Controllers\\AuthorsController.cs",
+              "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Controllers\\AuthorsController.cs",
+              "RelativeToolTip": "library\\Controllers\\AuthorsController.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAowAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T22:57:02.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "20251121211212_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Migrations\\20251121211212_InitialCreate.cs",
               "RelativeDocumentMoniker": "library\\Migrations\\20251121211212_InitialCreate.cs",
               "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Migrations\\20251121211212_InitialCreate.cs",
               "RelativeToolTip": "library\\Migrations\\20251121211212_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T21:12:13.396Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Program.cs",
               "RelativeDocumentMoniker": "library\\Program.cs",
               "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Program.cs",
               "RelativeToolTip": "library\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T20:26:06.247Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\appsettings.json",
               "RelativeDocumentMoniker": "library\\appsettings.json",
               "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\appsettings.json",
               "RelativeToolTip": "library\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-11-21T20:12:41.355Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "LibraryDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Data\\LibraryDbContext.cs",
               "RelativeDocumentMoniker": "library\\Data\\LibraryDbContext.cs",
               "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Data\\LibraryDbContext.cs",
               "RelativeToolTip": "library\\Data\\LibraryDbContext.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T18:49:05.914Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Models\\User.cs",
               "RelativeDocumentMoniker": "library\\Models\\User.cs",
               "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Models\\User.cs",
               "RelativeToolTip": "library\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T18:22:30.326Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Models\\Book.cs",
               "RelativeDocumentMoniker": "library\\Models\\Book.cs",
               "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Models\\Book.cs",
               "RelativeToolTip": "library\\Models\\Book.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T18:22:09.953Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "Author.cs",
               "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Models\\Author.cs",
               "RelativeDocumentMoniker": "library\\Models\\Author.cs",
