@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Marichka\\library-manager\\backend\\library\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Migrations\\20251121211212_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:library\\Migrations\\20251121211212_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\migrations\\20251121211212_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|solutionrelative:library\\migrations\\20251121211212_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9BAFD029-642C-482E-A31F-4FFCDB71BA1A}|library\\library.csproj|c:\\users\\marichka\\library-manager\\backend\\library\\library\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -38,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -57,21 +65,51 @@
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "AuthorsController.cs",
+              "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Controllers\\AuthorsController.cs",
+              "RelativeDocumentMoniker": "library\\Controllers\\AuthorsController.cs",
+              "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Controllers\\AuthorsController.cs",
+              "RelativeToolTip": "library\\Controllers\\AuthorsController.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAADwvyUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T22:57:02.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "library\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "library\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T22:56:04.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "20251121211212_InitialCreate.cs",
               "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Migrations\\20251121211212_InitialCreate.cs",
               "RelativeDocumentMoniker": "library\\Migrations\\20251121211212_InitialCreate.cs",
               "ToolTip": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Migrations\\20251121211212_InitialCreate.cs",
               "RelativeToolTip": "library\\Migrations\\20251121211212_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-21T21:12:13.396Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Program.cs",
               "RelativeDocumentMoniker": "library\\Program.cs",
@@ -79,12 +117,11 @@
               "RelativeToolTip": "library\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T20:26:06.247Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T20:26:06.247Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\appsettings.json",
               "RelativeDocumentMoniker": "library\\appsettings.json",
@@ -92,12 +129,11 @@
               "RelativeToolTip": "library\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-21T20:12:41.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T20:12:41.355Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "LibraryDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Data\\LibraryDbContext.cs",
               "RelativeDocumentMoniker": "library\\Data\\LibraryDbContext.cs",
@@ -105,12 +141,11 @@
               "RelativeToolTip": "library\\Data\\LibraryDbContext.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAAAA8AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T18:49:05.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T18:49:05.914Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Models\\User.cs",
               "RelativeDocumentMoniker": "library\\Models\\User.cs",
@@ -118,12 +153,11 @@
               "RelativeToolTip": "library\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T18:22:30.326Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T18:22:30.326Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Book.cs",
               "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Models\\Book.cs",
               "RelativeDocumentMoniker": "library\\Models\\Book.cs",
@@ -131,12 +165,11 @@
               "RelativeToolTip": "library\\Models\\Book.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T18:22:09.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T18:22:09.953Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Author.cs",
               "DocumentMoniker": "C:\\Users\\Marichka\\library-manager\\backend\\library\\library\\Models\\Author.cs",
               "RelativeDocumentMoniker": "library\\Models\\Author.cs",
@@ -144,8 +177,7 @@
               "RelativeToolTip": "library\\Models\\Author.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T18:21:49.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-21T18:21:49.466Z"
             }
           ]
         }
