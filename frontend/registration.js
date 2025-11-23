@@ -1,4 +1,3 @@
-const API_BASE_URL = 'https://localhost:7210/api'; 
 const registerForm = document.getElementById('registrationForm');
 
 registerForm.addEventListener('submit', async (e) => {
