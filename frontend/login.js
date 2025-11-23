@@ -1,9 +1,6 @@
 const API_BASE_URL = 'https://localhost:7210/api'; 
 
-const token = localStorage.getItem('jwtToken');
-if (token) {
-    window.location.href = 'index.html'; 
-}
+
 
 const loginForm = document.getElementById('loginForm');
 const messageElement = document.getElementById('message');
