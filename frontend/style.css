@@ -13,7 +13,7 @@ body {
    HEADER & LOGOUT
    ======================================= */
 header {
-    background-color: #34495e; /* Темний колір для контрасту */
+    background-color: #34495e; 
     color: white;
     padding: 15px 30px;
     display: flex;
@@ -49,7 +49,7 @@ header a:hover {
    ======================================= */
 .tabs {
     display: flex;
-    background-color: #ecf0f1; /* Світло-сірий фон для вкладок */
+    background-color: #ecf0f1; 
     border-bottom: 2px solid #bdc3c7;
     margin-bottom: 20px;
 }
@@ -70,7 +70,7 @@ header a:hover {
 }
 
 #booksTab.active, #authorsTab.active {
-    border-bottom: 3px solid #007bff; /* Синій індикатор активності */
+    border-bottom: 3px solid #007bff; 
     background-color: white;
     color: #007bff;
 }
@@ -86,7 +86,7 @@ main {
     background-color: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Легка тінь для об'ємності */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
 }
 
 /* =======================================
@@ -101,7 +101,7 @@ table {
 th, td {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid #ecf0f1; /* Тонкі, світлі лінії */
+    border-bottom: 1px solid #ecf0f1;
 }
 
 th {
