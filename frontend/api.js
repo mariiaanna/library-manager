@@ -1,6 +1,6 @@
 const API_BASE_URL = 'https://localhost:7210/api'; 
 
-async function fetchProtectedData(endpoint, method = 'GET', body = null) {
+async function fetchProtectedData(endpoint, method = 'GET', body = null, returnFullResponse = false) {
     const token = localStorage.getItem('jwtToken');
     
     if (!token) {
@@ -30,14 +30,18 @@ async function fetchProtectedData(endpoint, method = 'GET', body = null) {
         throw new Error("Token expired or invalid.");
     }
 
-    if (!response.ok && response.status !== 204) {
+    if (response.status === 204 || response.status === 404) {
+        return null; 
+    }
+    
+    if (!response.ok) {
         const errorData = await response.text();
         throw new Error(`API Error ${response.status}: ${errorData}`);
     }
 
-    if (response.status === 204 || response.status === 404) {
-        return null; 
+    if (returnFullResponse) {
+        return response; 
     }
 
-    return await response.json();
+    return await response.json(); 
 }

@@ -15,21 +15,7 @@ authorsTab.addEventListener('click', () => switchTabs(authorsTab, loadAuthors));
 booksTab.addEventListener('click', () => switchTabs(booksTab, loadBooks));
 
 switchTabs(booksTab, loadBooks);
-/*
-async function loadBooks() {
-    contentContainer.innerHTML = '<h2>Loading Books...</h2>';
-    try {
-        const books = await fetchProtectedData('Books'); 
-        
-        const html = books ? generateBooksTable(books) : '<p>No books found.</p>';
-        
-        contentContainer.innerHTML = html;
 
-    } catch (error) {
-        contentContainer.innerHTML = `<p style="color: red;">Error: Could not load data. ${error.message}</p>`;
-    }
-}
-*/
 async function loadAuthors() {
     contentContainer.innerHTML = '<h2>Loading Authors...</h2>';
     try {
@@ -345,7 +331,6 @@ async function loadBooks(titleFilter = '', authorNameFilter = '') {
     let endpoint = 'Books';
     const params = [];
     
-    // ... (Логіка формування параметрів запиту)
     if (titleFilter) { params.push(`title=${encodeURIComponent(titleFilter)}`); }
     if (authorNameFilter) { params.push(`authorName=${encodeURIComponent(authorNameFilter)}`); }
 
@@ -356,15 +341,12 @@ async function loadBooks(titleFilter = '', authorNameFilter = '') {
     try {
         const books = await fetchProtectedData(endpoint); 
         
-        let htmlContent = `<h2>Books List</h2>`; // Заголовок завжди видимий
+        let htmlContent = `<h2>Books List</h2>`; 
 
         if (books && books.length > 0) {
-            // 1. Якщо є результати: відображаємо таблицю
             htmlContent += generateBooksTable(books, titleFilter, authorNameFilter); 
         } else {
-            // 2. Якщо результатів немає: відображаємо форму пошуку + повідомлення
             
-            // Ми повинні згенерувати форму пошуку, щоб користувач міг її очистити/змінити
             const searchFormHTML = generateSearchFormHTML(titleFilter, authorNameFilter); 
             
             htmlContent = `
@@ -378,13 +360,10 @@ async function loadBooks(titleFilter = '', authorNameFilter = '') {
                 </div>
             `;
             
-            // ВАЖЛИВО: Оскільки ми змінили спосіб генерації HTML при відсутності результатів, 
-            // нам потрібно переконатися, що форма пошуку та reset-кнопка вбудовані правильно.
         }
         
         contentContainer.innerHTML = htmlContent;
         
-        // Прив'язуємо слухач тільки якщо форма пошуку була відображена
         const searchForm = document.getElementById('searchForm');
         if (searchForm) {
             searchForm.addEventListener('submit', handleSearch);
@@ -398,9 +377,49 @@ async function loadBooks(titleFilter = '', authorNameFilter = '') {
 const logoutBtn = document.getElementById('logoutBtn');
 
 logoutBtn.addEventListener('click', () => {
-    // 1. КРИТИЧНО: Видаляємо токен з локального сховища
     localStorage.removeItem('jwtToken'); 
 
-    // 2. Перенаправляємо користувача на вітальну сторінку
     window.location.href = 'welcome.html'; 
 });
+
+
+
+async function exportBooks() {
+    try {
+        const response = await fetchProtectedData('Books/export/csv', 'GET', null, true);
+        
+        if (!response || !response.ok) {
+            throw new Error("Export request failed. Check server log.");
+        }
+
+        const blob = await response.blob();
+        
+        const contentDisposition = response.headers.get('Content-Disposition');
+        let filename = 'books_export.csv';
+        
+        if (contentDisposition) {
+            const filenameMatch = contentDisposition.match(/filename\*?=["']?([^;"\r\n]+)["']?/i);
+            if (filenameMatch && filenameMatch[1]) {
+                filename = decodeURIComponent(filenameMatch[1].replace(/\"/g, ''));
+            }
+        }
+
+        const downloadUrl = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        
+        a.href = downloadUrl;
+        a.download = filename;
+        
+        document.body.appendChild(a);
+        a.click();
+        
+        a.remove();
+        window.URL.revokeObjectURL(downloadUrl);
+        
+        alert("Export successful! File downloaded.");
+
+    } catch (error) {
+        alert(`Export failed: ${error.message}`);
+        console.error("Export Error:", error);
+    }
+}

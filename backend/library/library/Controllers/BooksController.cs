@@ -1,8 +1,10 @@
 ﻿using library.Data;
 using library.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
 
 
 namespace library.Controllers
@@ -55,7 +57,29 @@ namespace library.Controllers
             return Ok(book); 
         
         }
-      
+        [HttpGet("export/csv")]
+        [Authorize] 
+        public async Task<IActionResult> ExportBooksCsv()
+        {
+            var books = await _context.Books.Include(b => b.Author).ToListAsync();
+
+            var csvContent = new StringBuilder();
+            csvContent.AppendLine("Title,Author,PublicationYear,Annotation,Nationality");
+
+            foreach (var book in books)
+            {
+                var line = $"{book.Title},{book.Author.Name},{book.PublicationYear},{book.Annotation},{book.Author.Nationality}";
+
+                line = line.Replace(",", ";").Replace(Environment.NewLine, " ");
+
+                csvContent.AppendLine(line);
+            }
+
+            return File(Encoding.UTF8.GetBytes(csvContent.ToString()),
+                        "text/csv", 
+                        $"books_export_{DateTime.Now.ToShortDateString()}.csv");
+        }
+
         [HttpPost]
         public async Task<ActionResult<Book>> AddBook(Book newBook)
         {
