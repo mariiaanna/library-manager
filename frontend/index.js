@@ -2,7 +2,7 @@ const contentContainer = document.getElementById('contentContainer');
 const authorsTab = document.getElementById('authorsTab');
 const booksTab = document.getElementById('booksTab');
 
-
+//Handles tab switching logic.
 function switchTabs(activeTab, contentLoader){
     authorsTab.classList.remove('active');
     booksTab.classList.remove('active');
@@ -16,6 +16,7 @@ booksTab.addEventListener('click', () => switchTabs(booksTab, loadBooks));
 
 switchTabs(booksTab, loadBooks);
 
+//Fetches all Author data from the protected API endpoint.
 async function loadAuthors() {
     contentContainer.innerHTML = '<h2>Loading Authors...</h2>';
     try {
@@ -30,7 +31,7 @@ async function loadAuthors() {
     }
 }
 
-
+//Renders the full HTML table for the Author list.
 function generateAuthorsTable(authors) {
     let html = `
         <h2>Authors List</h2>
@@ -74,6 +75,8 @@ function generateAuthorsTable(authors) {
     html += `</tbody></table>`;
     return html;
 }
+
+//Renders the full HTML table for the Book list
 function generateBooksTable(books, currentTitle = '', currentAuthor = '') {
 
     const searchFormHTML = `
@@ -122,7 +125,7 @@ function generateBooksTable(books, currentTitle = '', currentAuthor = '') {
 }
 
 
-
+//Renders the HTML structure for the Add/Edit Author form.
 function getAuthorFormHTML(author = {}) {
     const isEditing = author.id !== undefined;
     const title = isEditing ? `Edit Author ID: ${author.id}` : 'Add New Author';
@@ -149,12 +152,12 @@ function getAuthorFormHTML(author = {}) {
         </form>
     `;
 }
-
+//Initiates the Add Author form display.
 function showAddAuthorForm() {
     contentContainer.innerHTML = getAuthorFormHTML();
     document.getElementById('authorForm').addEventListener('submit', handleAuthorSubmission);
 }
-
+//Universal handler for submitting the Author forms (POST or PUT).
 async function handleAuthorSubmission(e) {
     e.preventDefault();
     const form = e.target;
@@ -193,7 +196,7 @@ async function handleAuthorSubmission(e) {
         console.error("Author submission error:", error);
     }
 }
-
+//Universal handler for submitting the Book forms (POST or PUT).
 async function handleBookSubmission(e) {
     e.preventDefault();
     
@@ -224,6 +227,7 @@ async function handleBookSubmission(e) {
     }
 }
 
+//Handles the deletion of a specific Author
 async function deleteAuthor(id) {
     if (!confirm(`Are you sure you want to delete author with ID ${id}? This will also delete their books.`)) {
         return; 
@@ -241,7 +245,7 @@ async function deleteAuthor(id) {
     }
 }
 
-
+//Initiates the Author editing process.
 async function showEditAuthorForm(id) {
     try {
         const authorToEdit = await fetchProtectedData(`Authors/${id}`);
@@ -260,7 +264,7 @@ async function showEditAuthorForm(id) {
     }
 }
 
-
+//Renders the HTML structure for the Add/Edit Book form.
 async function getBookFormHTML(book = {}) {
     const isEditing = book.id !== undefined;
     const title = isEditing ? `Edit Book ID: ${book.id}` : 'Add New Book';
@@ -299,13 +303,13 @@ async function getBookFormHTML(book = {}) {
         </form>
     `;
 }
-
+//Initiates the Add Book form display.
 async function showAddBookForm() {
     contentContainer.innerHTML = await getBookFormHTML();
     document.getElementById('bookForm').addEventListener('submit', handleBookSubmission);
 }
 
-
+//Event handler for the search form submission.
 function handleSearch(e) {
     e.preventDefault();
     const form = e.target;
@@ -315,6 +319,7 @@ function handleSearch(e) {
     loadBooks(title, authorName);
 }
 
+//Renders the HTML markup for the search/filter form.
 function generateSearchFormHTML(currentTitle = '', currentAuthor = '') {
     return `
         <form id="searchForm" class="search-bar">
@@ -325,6 +330,7 @@ function generateSearchFormHTML(currentTitle = '', currentAuthor = '') {
         </form>
     `;
 }
+//Fetches Book data 
 async function loadBooks(titleFilter = '', authorNameFilter = '') {
     contentContainer.innerHTML = '<h2>Loading Books...</h2>';
     
@@ -383,7 +389,7 @@ logoutBtn.addEventListener('click', () => {
 });
 
 
-
+//Handles the Export Books functionality.
 async function exportBooks() {
     try {
         const response = await fetchProtectedData('Books/export/csv', 'GET', null, true);

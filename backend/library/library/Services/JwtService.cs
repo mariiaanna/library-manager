@@ -5,7 +5,7 @@ using System.Security.Claims;
 using System.Text;
 
 namespace library.Services
-{
+{   //Implements IJwtService, handling the logic of creating and signing the JWT token.
     public class JwtService : IJwtService
     {
         private readonly IConfiguration _configuration;

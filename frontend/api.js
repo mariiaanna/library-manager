@@ -1,5 +1,6 @@
 const API_BASE_URL = 'https://localhost:7210/api'; 
 
+// wrapper for the Fetch API to handle protected requests to the backend.
 async function fetchProtectedData(endpoint, method = 'GET', body = null, returnFullResponse = false) {
     const token = localStorage.getItem('jwtToken');
     

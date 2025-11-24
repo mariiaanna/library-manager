@@ -1,5 +1,6 @@
 ﻿namespace library.Models
 {
+    // Database Model: Represents the 'Users' table in the database.
     public class User
     {
         public int Id { get; set; }

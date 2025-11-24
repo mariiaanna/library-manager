@@ -3,6 +3,8 @@ using library.Models;
 
 namespace library.Data
 {
+    // DbContext: Acts as the session with the database. Manages data interaction 
+    // and tracks changes to the entities (Books, Authors, Users).
     public class LibraryDbContext : DbContext
     {
         public LibraryDbContext(DbContextOptions<LibraryDbContext> options) : base(options) { }

@@ -1,7 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using library.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace library.DTOs
 {
+    //This model is used exclusively for receiving
+    // login credentials (input data) from the client
     public class UserLoginDto
     {
         [Required]

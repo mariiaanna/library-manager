@@ -1,8 +1,10 @@
-﻿using System.Security.Cryptography;
+﻿using library.Models;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace library.Services
 {
+    //Provides cryptographic utilities for securely storing and validating user passwords.
     public static class PasswordHasher
     {
         public static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)

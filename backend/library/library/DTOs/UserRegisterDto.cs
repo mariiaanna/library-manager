@@ -2,6 +2,8 @@
 
 namespace library.DTOs
 {
+    //Used exclusively to safely receive registration credentials 
+    // from the client.
     public class UserRegisterDto
     {
         [Required]

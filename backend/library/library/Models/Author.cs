@@ -1,5 +1,6 @@
 ﻿namespace library.Models
 {
+    // Database Model: Represents the 'Authors' table in the database.
     public class Author
     {
         public int Id { get; set; }

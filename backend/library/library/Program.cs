@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-//using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +11,6 @@ var issuer = builder.Configuration["JwtSettings:Issuer"];
 var audience = builder.Configuration["JwtSettings:Audience"];
 var key = Encoding.ASCII.GetBytes(secretKey);
 
-// Add services to the container.
 builder.Services.AddScoped<library.Services.IJwtService, library.Services.JwtService>();
 builder.Services.AddAuthentication(options =>
 {
@@ -21,17 +19,17 @@ builder.Services.AddAuthentication(options =>
 })
 .AddJwtBearer(options =>
 {
-    options.RequireHttpsMetadata = false; // У продакшені має бути true
+    options.RequireHttpsMetadata = false; 
     options.SaveToken = true;
     options.TokenValidationParameters = new TokenValidationParameters
     {
-        ValidateIssuerSigningKey = true, // Перевірка підпису ключем
-        IssuerSigningKey = new SymmetricSecurityKey(key), // Наш секретний ключ
+        ValidateIssuerSigningKey = true, 
+        IssuerSigningKey = new SymmetricSecurityKey(key), 
         ValidateIssuer = true,
-        ValidIssuer = issuer, // Перевірка видавця
+        ValidIssuer = issuer, 
         ValidateAudience = true,
-        ValidAudience = audience, // Перевірка аудиторії
-        ClockSkew = TimeSpan.Zero // Токен має бути валідним одразу
+        ValidAudience = audience, 
+        ClockSkew = TimeSpan.Zero 
     };
 });
 

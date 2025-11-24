@@ -15,13 +15,14 @@ namespace library.Controllers
         {
             _context = context;
         }
-
+        // GET: api/Authors
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Author>>> GetAuthors()
         {
             return Ok(await _context.Authors.ToListAsync());
         }
 
+        // GET: api/Authors/{id}
         [HttpGet ("{id}")]
         public async Task<ActionResult<Author>> GetAuthorById(int id)
         {
@@ -33,6 +34,7 @@ namespace library.Controllers
             return Ok(author);
         }
 
+        // POST: api/Authors
         [HttpPost]
         public async Task<ActionResult<Author>> AddAuthor(Author newAuthor) 
         {
@@ -46,6 +48,7 @@ namespace library.Controllers
             return CreatedAtAction(nameof(GetAuthorById), new {id = newAuthor.Id}, newAuthor);
         }
 
+        // PUT: api/Authors/{id}
         [HttpPut ("{id}")]
         public async Task<IActionResult> EditAuthor(int id, Author updatedAuthor)
         {
@@ -73,6 +76,7 @@ namespace library.Controllers
             return NoContent();
         }
 
+        // DELETE: api/Authors/{id}
         [HttpDelete ("{id}")]
         public async Task<IActionResult> DeleteAuthor(int id)
         {
