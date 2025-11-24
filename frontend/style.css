@@ -163,7 +163,6 @@ td button:hover {
     background-color: #c0392b;
 }
 
-/* Кнопка Edit може бути іншого кольору */
 td button:first-child { 
     background-color: #f39c12; 
 }
@@ -171,7 +170,7 @@ td button:first-child:hover {
     background-color: #e67e22; 
 }
 
-/* Стиль для повідомлень про помилки */
+/* Повідомлення про помилки */
 #formMessage, p[style*="red"] {
     font-weight: 600;
     padding: 10px;

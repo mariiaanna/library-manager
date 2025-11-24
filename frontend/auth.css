@@ -1,8 +1,7 @@
 body {
-    /* Ця секція вже повинна мати Flexbox для центрування */
     display: flex;
-    justify-content: center; /* Центрування по горизонталі */
-    align-items: center;     /* Центрування по вертикалі */
+    justify-content: center; 
+    align-items: center;     
     min-height: 100vh;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,84 +11,66 @@ body {
 
 main {
     display: flex;
-    flex-direction: column; /* Елементи один над одним */
-    align-items: center;    /* Центрування по горизонталі */
+    flex-direction: column; 
+    align-items: center;    
     padding: 40px 60px;
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Більш виразна тінь */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
 }
 
-/* Заголовок на вітальній сторінці */
 main h1 {
     color: #34495e;
     margin-bottom: 40px;
     font-size: 2.2em;
 }
 
-/* Стилі для самих елементів BUTTON */
 main button {
-    /* Робимо кнопку помітною та задаємо розмір */
     padding: 0;
     width: 250px;
-    background-color: #3498db; /* Основний колір */
+    background-color: #3498db; 
     border: none;
     border-radius: 6px;
-    margin-bottom: 15px; /* Відступ між кнопками */
+    margin-bottom: 15px; 
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s;
 }
 
-/* Стилі для посилання a всередині BUTTON */
 main button a {
-    /* Робимо посилання блочним, щоб покрити всю кнопку */
     display: block;
     padding: 15px 25px;
     color: white; 
-    text-decoration: none; /* Прибираємо підкреслення */
+    text-decoration: none; 
     font-size: 1.1em;
     font-weight: bold;
     text-align: center;
 }
 
-/* Ефект при наведенні */
 main button:hover {
     background-color: #2980b9; 
-    transform: translateY(-2px); /* Легкий підйом */
+    transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 1. ВИПРАВЛЕННЯ: ЗАГАЛЬНИЙ ПОТІК ФОРМИ */
-/* Ми скасовуємо будь-який Flex/Grid, щоб елементи йшли один за одним (block flow) */
 .container form {
-    /* Робимо так, щоб елементи stack-увалися (ставали один під одним) */
     display: block; 
 }
 
-/* 2. ВИПРАВЛЕННЯ: ШИРИНА ПОЛІВ ТА КНОПКИ */
-/* Робимо поля та кнопку повною шириною контейнера */
 .container input[type="text"], 
 .container input[type="password"],
 .container button[type="submit"] {
-    width: 100%; /* Займають усю доступну ширину */
-    
-    /* Важливо: Це гарантує, що padding не збільшує загальну ширину */
+    width: 100%; 
     box-sizing: border-box; 
-    
-    margin-bottom: 15px; /* Додаємо простір між полями */
-    padding: 10px; /* Поля більшого розміру */
+    margin-bottom: 15px; 
+    padding: 10px; 
 }
 
-/* 3. ВИПРАВЛЕННЯ: КНОПКА */
-/* Якщо кнопка в стилях була об'єднана з полем, роз'єднуємо їх */
 .container button[type="submit"] {
     width: 100%;
-    margin-top: 10px; /* Додаємо відступ від поля пароля */
+    margin-top: 10px; 
     padding: 12px;
 }
 
-/* 4. ВИПРАВЛЕННЯ: ЗАГОЛОВКИ (LABELS) */
-/* Заголовки мають бути block-елементами, щоб поле починалося з нового рядка */
 .container label {
     display: block; 
     margin-bottom: 5px;
