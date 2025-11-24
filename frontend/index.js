@@ -15,7 +15,7 @@ authorsTab.addEventListener('click', () => switchTabs(authorsTab, loadAuthors));
 booksTab.addEventListener('click', () => switchTabs(booksTab, loadBooks));
 
 switchTabs(booksTab, loadBooks);
-
+/*
 async function loadBooks() {
     contentContainer.innerHTML = '<h2>Loading Books...</h2>';
     try {
@@ -29,7 +29,7 @@ async function loadBooks() {
         contentContainer.innerHTML = `<p style="color: red;">Error: Could not load data. ${error.message}</p>`;
     }
 }
-
+*/
 async function loadAuthors() {
     contentContainer.innerHTML = '<h2>Loading Authors...</h2>';
     try {
@@ -88,11 +88,21 @@ function generateAuthorsTable(authors) {
     html += `</tbody></table>`;
     return html;
 }
-function generateBooksTable(books) {
+function generateBooksTable(books, currentTitle = '', currentAuthor = '') {
+
+    const searchFormHTML = `
+    <form id="searchForm" class="search-bar">
+        <input type="text" name="searchTitle" placeholder="Search by Title" value="${currentTitle || ''}">
+        <input type="text" name="searchAuthor" placeholder="Search by Author" value="${currentAuthor || ''}">
+        
+        <button type="submit">Search</button> 
+        <button type="button" onclick="loadBooks()">Reset</button> 
+        </form>
+`;
+
     let html = `
-        <h2>Books List</h2>
-        <div id="filterFormContainer">
-            </div>
+        ${searchFormHTML}
+        <div id="filterFormContainer"></div>
         <button onclick="showAddBookForm()">Add New Book</button>
         <button onclick="exportBooks()">Export</button>
         <table>
@@ -198,6 +208,35 @@ async function handleAuthorSubmission(e) {
     }
 }
 
+async function handleBookSubmission(e) {
+    e.preventDefault();
+    
+    const form = e.target;
+    const bookId = form.dataset.bookId;
+    const isEditing = !!bookId;
+
+    const formData = {
+        title: form.title.value,
+        authorId: parseInt(form.authorId.value),
+        publicationYear: parseInt(form.publicationYear.value),
+        annotation: form.annotation.value,
+        id: isEditing ? parseInt(bookId) : 0
+    };
+
+    const method = isEditing ? 'PUT' : 'POST';
+    const endpoint = isEditing ? `Books/${bookId}` : 'Books';
+
+    try {
+        await fetchProtectedData(endpoint, method, formData);
+
+        alert(`Book ${isEditing ? 'updated' : 'added'} successfully!`);
+        loadBooks();
+
+    } catch (error) {
+        document.getElementById('formMessage').textContent = `Error: ${error.message}`;
+        console.error("Book submission error:", error);
+    }
+}
 
 async function deleteAuthor(id) {
     if (!confirm(`Are you sure you want to delete author with ID ${id}? This will also delete their books.`)) {
@@ -234,3 +273,134 @@ async function showEditAuthorForm(id) {
         loadAuthors(); 
     }
 }
+
+
+async function getBookFormHTML(book = {}) {
+    const isEditing = book.id !== undefined;
+    const title = isEditing ? `Edit Book ID: ${book.id}` : 'Add New Book';
+    const buttonText = isEditing ? 'Update Book' : 'Add Book';
+
+    const authors = await fetchProtectedData('Authors'); 
+    
+    let authorOptions = '<option value="">-- Select Author --</option>';
+    if (authors && authors.length > 0) {
+        authors.forEach(author => {
+            const isSelected = isEditing && book.authorId === author.id ? 'selected' : '';
+            authorOptions += `<option value="${author.id}" ${isSelected}>${author.name}</option>`;
+        });
+    }
+
+    return `
+        <h2>${title}</h2>
+        <form id="bookForm" data-book-id="${book.id || ''}">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" value="${book.title || ''}" required>
+
+            <label for="authorId">Author (Required):</label>
+            <select id="authorId" name="authorId" required>
+                ${authorOptions}
+            </select>
+            
+            <label for="publicationYear">Publication Year:</label>
+            <input type="number" id="publicationYear" name="publicationYear" value="${book.publicationYear || ''}" required min="1000" max="2100">
+            
+            <label for="annotation">Annotation:</label>
+            <textarea id="annotation" name="annotation">${book.annotation || ''}</textarea>
+
+            <button type="submit">${buttonText}</button>
+            <button type="button" onclick="loadBooks()">Cancel</button>
+            <p id="formMessage" style="color: red; margin-top: 10px;"></p>
+        </form>
+    `;
+}
+
+async function showAddBookForm() {
+    contentContainer.innerHTML = await getBookFormHTML();
+    document.getElementById('bookForm').addEventListener('submit', handleBookSubmission);
+}
+
+
+function handleSearch(e) {
+    e.preventDefault();
+    const form = e.target;
+    const title = form.searchTitle.value;
+    const authorName = form.searchAuthor.value;
+    
+    loadBooks(title, authorName);
+}
+
+function generateSearchFormHTML(currentTitle = '', currentAuthor = '') {
+    return `
+        <form id="searchForm" class="search-bar">
+            <input type="text" name="searchTitle" placeholder="Search by Title" value="${currentTitle || ''}">
+            <input type="text" name="searchAuthor" placeholder="Search by Author" value="${currentAuthor || ''}">
+            <button type="submit">Search</button>
+            <button type="button" onclick="loadBooks()">Reset</button>
+        </form>
+    `;
+}
+async function loadBooks(titleFilter = '', authorNameFilter = '') {
+    contentContainer.innerHTML = '<h2>Loading Books...</h2>';
+    
+    let endpoint = 'Books';
+    const params = [];
+    
+    // ... (Логіка формування параметрів запиту)
+    if (titleFilter) { params.push(`title=${encodeURIComponent(titleFilter)}`); }
+    if (authorNameFilter) { params.push(`authorName=${encodeURIComponent(authorNameFilter)}`); }
+
+    if (params.length > 0) {
+        endpoint += '?' + params.join('&');
+    }
+    
+    try {
+        const books = await fetchProtectedData(endpoint); 
+        
+        let htmlContent = `<h2>Books List</h2>`; // Заголовок завжди видимий
+
+        if (books && books.length > 0) {
+            // 1. Якщо є результати: відображаємо таблицю
+            htmlContent += generateBooksTable(books, titleFilter, authorNameFilter); 
+        } else {
+            // 2. Якщо результатів немає: відображаємо форму пошуку + повідомлення
+            
+            // Ми повинні згенерувати форму пошуку, щоб користувач міг її очистити/змінити
+            const searchFormHTML = generateSearchFormHTML(titleFilter, authorNameFilter); 
+            
+            htmlContent = `
+                <h2>Books List</h2>
+                ${searchFormHTML}
+                <p style="text-align: center; margin-top: 30px; color: #cc3333;">
+                    No matches found.
+                </p>
+                <div style="text-align: center;">
+                    <button type="button" onclick="loadBooks()">Show All Books</button>
+                </div>
+            `;
+            
+            // ВАЖЛИВО: Оскільки ми змінили спосіб генерації HTML при відсутності результатів, 
+            // нам потрібно переконатися, що форма пошуку та reset-кнопка вбудовані правильно.
+        }
+        
+        contentContainer.innerHTML = htmlContent;
+        
+        // Прив'язуємо слухач тільки якщо форма пошуку була відображена
+        const searchForm = document.getElementById('searchForm');
+        if (searchForm) {
+            searchForm.addEventListener('submit', handleSearch);
+        }
+
+    } catch (error) {
+        contentContainer.innerHTML = `<p style="color: red;">Error: Could not load data. ${error.message}</p>`;
+    }
+}
+
+const logoutBtn = document.getElementById('logoutBtn');
+
+logoutBtn.addEventListener('click', () => {
+    // 1. КРИТИЧНО: Видаляємо токен з локального сховища
+    localStorage.removeItem('jwtToken'); 
+
+    // 2. Перенаправляємо користувача на вітальну сторінку
+    window.location.href = 'welcome.html'; 
+});

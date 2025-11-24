@@ -1,103 +1,181 @@
+/* =======================================
+   GENERAL LAYOUT (Shared from Login/Register)
+   ======================================= */
 body {
-    font-family: Arial, sans-serif; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f9; 
     color: #333; 
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    min-height: 100vh;
     margin: 0;
-    line-height: 1.6;
+    min-height: 100vh;
 }
 
-.container {
-    width: 100%;
-    max-width: 400px;
-    padding: 30px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+/* =======================================
+   HEADER & LOGOUT
+   ======================================= */
+header {
+    background-color: #34495e; /* Темний колір для контрасту */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    text-align: center;
-    color: #2c3e50;
-}
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: underline;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
+header p {
+    font-size: 1.5em;
     font-weight: bold;
-    color: #444;
+    margin: 0;
 }
 
-input[type="text"], 
-input[type="password"] {
+header a {
+    color: #ffcccc;
+    text-decoration: none;
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border: 1px solid #ffcccc;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+header a:hover {
+    background-color: #5d748f;
+}
+
+
+
+/* =======================================
+   TAB NAVIGATION STYLES
+   ======================================= */
+.tabs {
+    display: flex;
+    background-color: #ecf0f1; /* Світло-сірий фон для вкладок */
+    border-bottom: 2px solid #bdc3c7;
+    margin-bottom: 20px;
+}
+
+#booksTab, #authorsTab {
+    padding: 15px 25px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 1em;
+    font-weight: 500;
+    color: #333;
+    transition: background-color 0.3s;
+}
+
+#booksTab:hover, #authorsTab:hover {
+    background-color: #e0e6e9;
+}
+
+#booksTab.active, #authorsTab.active {
+    border-bottom: 3px solid #007bff; /* Синій індикатор активності */
+    background-color: white;
+    color: #007bff;
+}
+
+/* =======================================
+   MAIN CONTENT & CONTAINER
+   ======================================= */
+main {
+    padding: 0 30px 30px;
+}
+
+#contentContainer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Легка тінь для об'ємності */
+}
+
+/* =======================================
+   TABLE STYLES
+   ======================================= */
+table {
     width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1; /* Тонкі, світлі лінії */
+}
+
+th {
+    background-color: #f8f8f8;
+    color: #555;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* =======================================
+   FORM & SEARCH STYLES
+   ======================================= */
+
+/* Стилі для форми пошуку */
+#searchForm {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
     padding: 10px;
-    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#searchForm input[type="text"] {
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box;
+    flex-grow: 1;
 }
 
-button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
+/* Стилі для загальних кнопок (Add New, Export, Search) */
+button {
+    padding: 10px 15px;
+    background-color: #3498db;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s;
+    font-size: 0.9em;
+    margin-right: 5px;
 }
 
-button[type="submit"]:hover {
-    background-color: #0056b3;
-}
-#messageElement{
-    color: red;
-}
-
-main {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;   
-    gap: 25px;             
-    width: 100%;
+/* Стилі для кнопок Actions (Edit/Delete) */
+td button {
+    padding: 6px 10px;
+    background-color: #e74c3c;
+    font-size: 0.8em;
 }
 
-main button {
-    padding: 0;
-    width: 280px;
-    background-color: #007bff; 
-    border: none;
-    border-radius: 6px;
-    overflow: hidden;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s ease;
+td button:hover {
+    background-color: #c0392b;
 }
 
-main button a {
-    display: block;
-    padding: 15px 25px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: bold;
-    text-align: center;
+/* Кнопка Edit може бути іншого кольору */
+td button:first-child { 
+    background-color: #f39c12; 
+}
+td button:first-child:hover { 
+    background-color: #e67e22; 
 }
 
-main button:hover {
-    background-color: #0056b3; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+/* Стиль для повідомлень про помилки */
+#formMessage, p[style*="red"] {
+    font-weight: 600;
+    padding: 10px;
+    background-color: #fdd;
+    border: 1px solid #f00;
+    border-radius: 4px;
 }

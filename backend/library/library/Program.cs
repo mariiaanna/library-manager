@@ -35,7 +35,11 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler =
+        System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+});
 var connectionString = builder.Configuration.GetConnectionString("LibraryDbConnection");
 builder.Services.AddDbContext<LibraryDbContext>(options => options.UseNpgsql(connectionString));
 
